@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary SEO -->
+  <title>Advanced Improviser — Audio Loop Practice App for Android</title>
+  <meta name="description" content="Advanced Improviser is a professional audio loop practice app for Android musicians. Create seamless loop regions, control tempo and pitch, and practise any piece with a high-quality waveform editor." />
+  <meta name="keywords" content="audio loop app, music practice app, loop player android, waveform editor, tempo control, pitch shift, musician practice tool, Advanced Improviser" />
+  <meta name="author" content="Advanced Improviser" />
+  <link rel="canonical" href="https://anagovitsyn.github.io/audioed/" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://anagovitsyn.github.io/audioed/" />
+  <meta property="og:title" content="Advanced Improviser — Audio Loop Practice App" />
+  <meta property="og:description" content="Professional audio loop practice tool for Android. Waveform editor, seamless looping, tempo & pitch control for musicians." />
+  <meta property="og:image" content="https://anagovitsyn.github.io/audioed/assets/features-banner.png" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Advanced Improviser — Audio Loop Practice App" />
+  <meta name="twitter:description" content="Professional audio loop practice tool for Android. Create, edit and play back seamless loop regions on any audio file." />
+  <meta name="twitter:image" content="https://anagovitsyn.github.io/audioed/assets/features-banner.png" />
+
+  <!-- Structured Data (JSON-LD) — for AI discovery and Google rich results -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Advanced Improviser",
+    "operatingSystem": "ANDROID",
+    "applicationCategory": "MusicApplication",
+    "description": "Advanced Improviser is a professional audio loop practice app for Android. It lets musicians create unlimited named loop regions on any audio file, edit them with an interactive waveform editor, and play them back with click-free seamless looping, tempo control, and pitch shifting.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "url": "https://anagovitsyn.github.io/audioed/",
+    "downloadUrl": "https://play.google.com/store/apps/details?id=com.audiolooper",
+    "screenshot": "https://anagovitsyn.github.io/audioed/assets/app-screenshot.png",
+    "featureList": [
+      "Unlimited named loop regions per audio file",
+      "Interactive waveform editor with 10 zoom levels",
+      "Click-free seamless looping with equal-power crossfade",
+      "Tempo control 0.5×–2.0×",
+      "Pitch shift ±12 semitones",
+      "MP3, WAV, FLAC, M4A, OGG support",
+      "Region persistence as sidecar JSON files",
+      "Large file support (200 MB+)",
+      "Low-latency native audio engine (Oboe / C++)"
+    ]
+  }
+  </script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/icon-192.png" />
+  <link rel="apple-touch-icon" href="assets/icon-192.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════ NAV ═══════════════════════════════ -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner container">
+      <a class="nav__brand" href="#hero" aria-label="Advanced Improviser home">
+        <img src="assets/icon-round.png" alt="Advanced Improviser icon" width="36" height="36" />
+        <span>Advanced Improviser</span>
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#how-it-works">How it works</a></li>
+        <li><a href="#formats">Formats</a></li>
+        <li><a href="#download" class="btn btn--nav">Get the app</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════ HERO ══════════════════════════════ -->
+  <header id="hero" class="hero" role="banner">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="container hero__inner">
+      <div class="hero__copy">
+        <p class="hero__eyebrow">For Android musicians</p>
+        <h1 class="hero__title">Practice smarter<br />with seamless loops</h1>
+        <p class="hero__sub">
+          Advanced Improviser turns any audio file into a powerful practice tool.
+          Draw loop regions on a professional waveform editor, adjust tempo and
+          pitch, and play back with click-free seamless looping — all on your phone.
+        </p>
+        <div class="hero__cta">
+          <a
+            href="https://play.google.com/store/apps/details?id=com.audiolooper"
+            class="playstore-badge"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Get Advanced Improviser on Google Play"
+          >
+            <img
+              src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+              alt="Get it on Google Play"
+              width="220"
+              height="85"
+            />
+          </a>
+        </div>
+        <p class="hero__note">Free &nbsp;·&nbsp; Android 12+ &nbsp;·&nbsp; No ads</p>
+      </div>
+      <div class="hero__visual" aria-hidden="true">
+        <div class="phone-frame">
+          <img
+            src="assets/app-screenshot.png"
+            alt="Advanced Improviser app showing waveform editor with loop regions"
+            class="phone-frame__screen"
+            loading="eager"
+          />
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════ FEATURES ══════════════════════════ -->
+  <section id="features" class="section section--alt" aria-labelledby="features-heading">
+    <div class="container">
+      <div class="section-header">
+        <h2 id="features-heading" class="section-title">Everything you need to practise</h2>
+        <p class="section-sub">
+          From casual song learners to professional musicians — Advanced Improviser
+          gives you studio-grade loop tools in your pocket.
+        </p>
+      </div>
+
+      <div class="features-grid">
+
+        <article class="feature-card feature-card--accent" aria-label="Seamless loop playback">
+          <div class="feature-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+          </div>
+          <h3 class="feature-card__title">Click-Free Seamless Looping</h3>
+          <p class="feature-card__body">
+            Equal-power crossfade (10–15 ms) at every loop boundary. No pops,
+            no glitches — just smooth, artifact-free playback powered by a
+            native C++ Oboe engine.
+          </p>
+        </article>
+
+        <article class="feature-card" aria-label="Waveform editor">
+          <div class="feature-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <h3 class="feature-card__title">Interactive Waveform Editor</h3>
+          <p class="feature-card__body">
+            10 zoom levels from 1/256× to 8×. Drag the waveform to scroll,
+            tap to seek, and see a live time ruler that adapts to your zoom.
+          </p>
+        </article>
+
+        <article class="feature-card" aria-label="Loop regions">
+          <div class="feature-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M15 3v18"/></svg>
+          </div>
+          <h3 class="feature-card__title">Unlimited Named Loop Regions</h3>
+          <p class="feature-card__body">
+            Create as many colour-coded regions as you like. Each has a custom
+            name, precise sample-accurate boundaries, and drag handles with
+            oversized 72 px touch targets.
+          </p>
+        </article>
+
+        <article class="feature-card" aria-label="Tempo control">
+          <div class="feature-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
+          <h3 class="feature-card__title">Tempo Control</h3>
+          <p class="feature-card__body">
+            Slow down or speed up any track from 0.5× to 2.0× without changing
+            pitch. Snap points at every 0.1× increment make it easy to lock in
+            the right speed for your practice session.
+          </p>
+        </article>
+
+        <article class="feature-card" aria-label="Pitch shifting">
+          <div class="feature-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="4"/><polyline points="6 10 12 4 18 10"/></svg>
+          </div>
+          <h3 class="feature-card__title">Pitch Shift ±12 Semitones</h3>
+          <p class="feature-card__body">
+            Transpose any audio file up or down a full octave in either direction
+            while keeping the tempo exactly where you want it. Perfect for
+            transposing to a different key.
+          </p>
+        </article>
+
+        <article class="feature-card" aria-label="Region persistence">
+          <div class="feature-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+          </div>
+          <h3 class="feature-card__title">Auto-Save Loop Regions</h3>
+          <p class="feature-card__body">
+            Regions are saved automatically as lightweight JSON sidecar files
+            keyed by audio content hash — not file name. Move or rename your
+            file and your loops still load.
+          </p>
+        </article>
+
+        <article class="feature-card" aria-label="Large file support">
+          <div class="feature-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+          </div>
+          <h3 class="feature-card__title">Handles Large Files Effortlessly</h3>
+          <p class="feature-card__body">
+            Memory-optimised engine streams and caches audio intelligently.
+            Load files over 200 MB without crashes, with smart waveform
+            downsampling for recordings over 30 minutes.
+          </p>
+        </article>
+
+        <article class="feature-card" aria-label="Multi-format support">
+          <div class="feature-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+          </div>
+          <h3 class="feature-card__title">All Major Audio Formats</h3>
+          <p class="feature-card__body">
+            Import MP3, WAV, FLAC, M4A / AAC, and OGG files from anywhere
+            on your device. Hardware-accelerated decoding keeps loading fast
+            even on large files.
+          </p>
+        </article>
+
+        <article class="feature-card" aria-label="Recent files">
+          <div class="feature-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3 class="feature-card__title">Recent Files &amp; Persistent State</h3>
+          <p class="feature-card__body">
+            Reopen recent tracks instantly. Tempo, pitch, zoom level, and
+            selected region are restored exactly as you left them — per file.
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ HOW IT WORKS ═══════════════════════ -->
+  <section id="how-it-works" class="section" aria-labelledby="how-heading">
+    <div class="container">
+      <div class="section-header">
+        <h2 id="how-heading" class="section-title">How it works</h2>
+        <p class="section-sub">Three simple steps to a better practice session.</p>
+      </div>
+
+      <ol class="steps" role="list">
+        <li class="step">
+          <div class="step__number" aria-hidden="true">01</div>
+          <div class="step__content">
+            <h3 class="step__title">Open any audio file</h3>
+            <p class="step__body">
+              Tap <em>Select File</em> and pick an MP3, WAV, FLAC, M4A, or OGG
+              from your device storage. The app decodes it, renders the waveform,
+              and loads any regions you saved previously.
+            </p>
+          </div>
+        </li>
+        <li class="step">
+          <div class="step__number" aria-hidden="true">02</div>
+          <div class="step__content">
+            <h3 class="step__title">Create and name your loop regions</h3>
+            <p class="step__body">
+              Press <em>Set Start</em> at the beginning of the phrase, play a
+              bit, then press <em>Set End</em>. Drag the handles to fine-tune.
+              Add a name, pick a colour, and lock the handles so nothing moves
+              by accident.
+            </p>
+          </div>
+        </li>
+        <li class="step">
+          <div class="step__number" aria-hidden="true">03</div>
+          <div class="step__content">
+            <h3 class="step__title">Practice with tempo &amp; pitch</h3>
+            <p class="step__body">
+              Start playback and dial in your tempo — slow it right down to
+              0.5× while learning a difficult passage, then ramp it back to
+              1× as you get comfortable. Shift the pitch if you need a
+              different key.
+            </p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ FORMATS ════════════════════════════ -->
+  <section id="formats" class="section section--alt" aria-labelledby="formats-heading">
+    <div class="container">
+      <div class="section-header">
+        <h2 id="formats-heading" class="section-title">Supported audio formats</h2>
+        <p class="section-sub">Works with the files you already have.</p>
+      </div>
+      <ul class="formats-list" role="list" aria-label="Supported audio formats">
+        <li class="format-badge">MP3</li>
+        <li class="format-badge">WAV</li>
+        <li class="format-badge">FLAC</li>
+        <li class="format-badge">M4A</li>
+        <li class="format-badge">AAC</li>
+        <li class="format-badge">OGG</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ DOWNLOAD ══════════════════════════ -->
+  <section id="download" class="section cta-section" aria-labelledby="download-heading">
+    <div class="container cta-inner">
+      <img src="assets/icon-round.png" alt="" aria-hidden="true" class="cta-icon" width="80" height="80" />
+      <h2 id="download-heading" class="cta-title">Ready to practice smarter?</h2>
+      <p class="cta-sub">
+        Download Advanced Improviser for free on Google Play.
+        No in-app purchases, no ads — just a clean, focused practice tool.
+      </p>
+      <a
+        href="https://play.google.com/store/apps/details?id=com.audiolooper"
+        class="playstore-badge playstore-badge--large"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Download Advanced Improviser on Google Play"
+      >
+        <img
+          src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+          alt="Get it on Google Play"
+          width="270"
+          height="104"
+        />
+      </a>
+      <p class="cta-note">Android 12 (API 31) and above &nbsp;·&nbsp; Free</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ FOOTER ════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img src="assets/icon-round.png" alt="Advanced Improviser icon" width="28" height="28" />
+        <span>Advanced Improviser</span>
+      </div>
+      <p class="footer__copy">
+        &copy; <span id="year"></span> Advanced Improviser.
+        All rights reserved.
+      </p>
+      <nav class="footer__links" aria-label="Footer navigation">
+        <a href="https://play.google.com/store/apps/details?id=com.audiolooper" target="_blank" rel="noopener noreferrer">Google Play</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    // Year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Smooth-scroll polyfill for older WebViews
+    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+      anchor.addEventListener('click', function(e) {
+        var target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
